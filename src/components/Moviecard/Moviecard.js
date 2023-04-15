@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import{Link} from 'react-router-dom'
+
 import "./Moviecard.scss"
 
 const Moviecard = ({data}) => {
@@ -6,6 +8,7 @@ const Moviecard = ({data}) => {
  
   return (
     <div className='card-item'>
+      <Link to={`/movie/${data.imdbID}`}>
       <div className='card-inner'>
         <div className='card-top'>
       
@@ -18,7 +21,7 @@ const Moviecard = ({data}) => {
           </div>
         </div>
       </div>
-      
+      </Link>
     </div>
   )
 }
